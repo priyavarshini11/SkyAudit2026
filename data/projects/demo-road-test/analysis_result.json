@@ -1,0 +1,603 @@
+{
+  "project_id": "demo-road-test",
+  "project_name": "Integration Test Corridor",
+  "analyzed_at": "2026-10-08 23:31 UTC",
+  "expected_progress": 77.2,
+  "observable_progress": 26.8,
+  "confidence": 84.6,
+  "discrepancy": {
+    "status": "Potential Schedule Discrepancy",
+    "status_category": "potential_discrepancy",
+    "severity": "high",
+    "discrepancy_gap_pct": 50.4,
+    "explanation": "Expected completion is at 77.2% based on contractual milestones, but multi-temporal satellite observations indicate only 26.8% observable surface change (confidence: 84.6%). Physical corridor evidence indicates clearing/paving is significantly behind schedule.",
+    "recommendations": [
+      "Prioritize for immediate targeted on-site engineering inspection.",
+      "Request contractor interim billing and material delivery manifests.",
+      "Cross-reference recent milestone completion claims against satellite corridor segments."
+    ]
+  },
+  "metrics": {
+    "spatial_change_score": 0.1,
+    "temporal_consistency": 0.5,
+    "construction_feature_score": 0.15,
+    "milestone_alignment": 0.22,
+    "image_quality": 0.92,
+    "ndvi_drop_score": 0.087,
+    "surface_reflectance_score": 0.111
+  },
+  "progress_breakdown": {
+    "vegetation_clearance_contribution": 3.0,
+    "surface_disturbance_contribution": 6.2,
+    "corridor_continuity_contribution": 5.0,
+    "built_paved_signal_contribution": 5.0,
+    "temporal_consistency_contribution": 7.5,
+    "formula_used": "0.15×veg_clearance + 0.25×surface_disturbance + 0.20×corridor_continuity + 0.25×built_paved + 0.15×temporal_consistency"
+  },
+  "confidence_breakdown": {
+    "image_quality_weight": 27.6,
+    "observation_coverage_weight": 25.0,
+    "temporal_consistency_weight": 12.5,
+    "indicator_agreement_weight": 19.5,
+    "formula_used": "0.30×image_quality + 0.25×observation_coverage + 0.25×temporal_consistency + 0.20×indicator_agreement"
+  },
+  "observations": [
+    {
+      "id": "obs-01",
+      "date": "2026-02-15",
+      "source": "Sentinel-2 L2A",
+      "cloud_cover": 1.2,
+      "resolution_m": 10.0,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "file_path": "data/projects\\demo-road-test\\before.tif",
+      "preview_url": "/api/projects/demo-road-001/images/before.png",
+      "mean_ndvi": 0.74,
+      "mean_surface_reflectance": null,
+      "corridor_coverage_pct": 100.0
+    },
+    {
+      "id": "obs-02",
+      "date": "2026-06-20",
+      "source": "Sentinel-2 L2A",
+      "cloud_cover": 4.5,
+      "resolution_m": 10.0,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "file_path": "data/projects\\demo-road-test\\middle.tif",
+      "preview_url": "/api/projects/demo-road-001/images/middle.png",
+      "mean_ndvi": 0.48,
+      "mean_surface_reflectance": null,
+      "corridor_coverage_pct": 98.5
+    },
+    {
+      "id": "obs-03",
+      "date": "2026-09-28",
+      "source": "Sentinel-2 L2A",
+      "cloud_cover": 2.1,
+      "resolution_m": 10.0,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "file_path": "data/projects\\demo-road-test\\after.tif",
+      "preview_url": "/api/projects/demo-road-001/images/after.png",
+      "mean_ndvi": 0.36,
+      "mean_surface_reflectance": null,
+      "corridor_coverage_pct": 100.0
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-01-01",
+      "phase": "Project Initiation",
+      "title": "Contract Award & Project Kickoff",
+      "description": "Initial tender baseline established for 'Integration Test Corridor'. Total scope: 12.0 km.",
+      "observation_id": null,
+      "change_level": "baseline",
+      "metrics": {},
+      "key_findings": [
+        "Contract agreement executed",
+        "Corridor right-of-way defined"
+      ]
+    },
+    {
+      "date": "2026-02-15",
+      "phase": "Baseline Observation",
+      "title": "Pre-Construction Satellite Pass",
+      "description": "Sentinel-2 baseline imagery captured. Natural undisturbed terrain (Mean NDVI: 0.74).",
+      "observation_id": "obs-01",
+      "change_level": "low",
+      "metrics": {
+        "cloud_cover": 1.2,
+        "mean_ndvi": 0.74
+      },
+      "key_findings": [
+        "Clean optical conditions",
+        "Intact baseline canopy along corridor"
+      ]
+    },
+    {
+      "date": "2026-06-20",
+      "phase": "Mid-term Earthworks",
+      "title": "Earthwork & Land Clearing Detected",
+      "description": "Multispectral analysis indicates clear vegetation removal and initial cut-and-fill soil disturbance.",
+      "observation_id": "obs-02",
+      "change_level": "moderate",
+      "metrics": {
+        "cloud_cover": 4.5,
+        "ndvi_drop": 0.087
+      },
+      "key_findings": [
+        "Vegetation clearing confirmed",
+        "Earthwork active on initial road segments"
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "phase": "Current State",
+      "title": "Latest Observation Pass",
+      "description": "Surface reflectance analysis shows partial asphalt/subbase laying. Total observable corridor progress: 26.8%.",
+      "observation_id": "obs-03",
+      "change_level": "moderate",
+      "metrics": {
+        "cloud_cover": 2.1,
+        "surface_score": 0.111
+      },
+      "key_findings": [
+        "Paving and subbase detected on partial chainage",
+        "Remaining segments unworked"
+      ]
+    }
+  ],
+  "corridor_geojson": {
+    "type": "Feature",
+    "properties": {
+      "buffer_meters": 50.0,
+      "corridor_type": "road_buffer"
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            78.44145306858294,
+            17.40100773978169
+          ],
+          [
+            78.44145365719484,
+            17.401008232252174
+          ],
+          [
+            78.44819927290442,
+            17.406642331349218
+          ],
+          [
+            78.44820045294443,
+            17.406643313600725
+          ],
+          [
+            78.45491343369638,
+            17.41221214239907
+          ],
+          [
+            78.45491517603831,
+            17.412213580589523
+          ],
+          [
+            78.46158126043748,
+            17.41768861613706
+          ],
+          [
+            78.46158351749519,
+            17.41769045804833
+          ],
+          [
+            78.46819079572569,
+            17.42304788057754
+          ],
+          [
+            78.46819349744928,
+            17.423050054533586
+          ],
+          [
+            78.47473300848247,
+            17.428271941884084
+          ],
+          [
+            78.47473605821855,
+            17.42827435628871
+          ],
+          [
+            78.48120223915619,
+            17.433349582599313
+          ],
+          [
+            78.48120551060805,
+            17.433352126843303
+          ],
+          [
+            78.48759647562937,
+            17.43827692044939
+          ],
+          [
+            78.48759981253069,
+            17.438279467925415
+          ],
+          [
+            78.49391744745527,
+            17.443057600486267
+          ],
+          [
+            78.4939206677027,
+            17.443060014225132
+          ],
+          [
+            78.5001705354278,
+            17.447702611597496
+          ],
+          [
+            78.50017344103806,
+            17.447704752574452
+          ],
+          [
+            78.50636450259162,
+            17.45222973691611
+          ],
+          [
+            78.50636689576265,
+            17.45223147444102
+          ],
+          [
+            78.51251106096026,
+            17.456662665519122
+          ],
+          [
+            78.5125127647868,
+            17.45666388849653
+          ],
+          [
+            78.5186242950238,
+            17.46102980926513
+          ],
+          [
+            78.51862517551181,
+            17.46103043670752
+          ],
+          [
+            78.5247199686373,
+            17.465362883047423
+          ],
+          [
+            78.52475837755333,
+            17.46538747876791
+          ],
+          [
+            78.52479911344139,
+            17.465408342851443
+          ],
+          [
+            78.52484178399114,
+            17.46542527436398
+          ],
+          [
+            78.52488597825985,
+            17.46543811024442
+          ],
+          [
+            78.52493127063005,
+            17.465446726875005
+          ],
+          [
+            78.5249772249086,
+            17.465451041271898
+          ],
+          [
+            78.52502339852752,
+            17.46545101188441
+          ],
+          [
+            78.52506934680638,
+            17.465446638995125
+          ],
+          [
+            78.52511462723481,
+            17.46543796471726
+          ],
+          [
+            78.52515880373434,
+            17.46542507258908
+          ],
+          [
+            78.52520145085818,
+            17.465408086769326
+          ],
+          [
+            78.52524215788856,
+            17.465387170841534
+          ],
+          [
+            78.52528053279238,
+            17.46536252623859
+          ],
+          [
+            78.52531620599667,
+            17.465334390302758
+          ],
+          [
+            78.52534883394793,
+            17.465303033999916
+          ],
+          [
+            78.52537810242072,
+            17.465268759309957
+          ],
+          [
+            78.52540372954385,
+            17.46523189631847
+          ],
+          [
+            78.525425468515,
+            17.465192800037812
+          ],
+          [
+            78.52544310997745,
+            17.465151846988054
+          ],
+          [
+            78.52545648403628,
+            17.465109431570824
+          ],
+          [
+            78.52546546189451,
+            17.465065962271005
+          ],
+          [
+            78.5254699570933,
+            17.465021857722665
+          ],
+          [
+            78.52546992634457,
+            17.464977542677428
+          ],
+          [
+            78.52546536994772,
+            17.46493344391382
+          ],
+          [
+            78.52545633178667,
+            17.464889986127147
+          ],
+          [
+            78.525442898907,
+            17.464847587839436
+          ],
+          [
+            78.52542520067769,
+            17.46480665736885
+          ],
+          [
+            78.52540340754494,
+            17.464767588897402
+          ],
+          [
+            78.52537772939075,
+            17.46473075867476
+          ],
+          [
+            78.52534841351141,
+            17.46469652139485
+          ],
+          [
+            78.52531574223593,
+            17.46466520677994
+          ],
+          [
+            78.52528003020699,
+            17.46463711640534
+          ],
+          [
+            78.51918568390174,
+            17.460305001576014
+          ],
+          [
+            78.5130754529132,
+            17.455940023025207
+          ],
+          [
+            78.50693334338469,
+            17.451510328910345
+          ],
+          [
+            78.50074493796724,
+            17.446987300812395
+          ],
+          [
+            78.49449813903612,
+            17.442346998562954
+          ],
+          [
+            78.48818378736223,
+            17.437571365440338
+          ],
+          [
+            78.48179612988238,
+            17.432649137653577
+          ],
+          [
+            78.4753331116459,
+            17.427576411627836
+          ],
+          [
+            78.46879647737715,
+            17.422356840174917
+          ],
+          [
+            78.46219167876242,
+            17.4170014477649
+          ],
+          [
+            78.45552759377135,
+            17.411528074641875
+          ],
+          [
+            78.44881607368895,
+            17.405960478382386
+          ],
+          [
+            78.4420713418157,
+            17.400327138712303
+          ],
+          [
+            78.43530928306875,
+            17.394659833095893
+          ],
+          [
+            78.435273066828,
+            17.394632364925645
+          ],
+          [
+            78.43523422082092,
+            17.394608437278922
+          ],
+          [
+            78.4351931191548,
+            17.39458828059048
+          ],
+          [
+            78.43515015765965,
+            17.394572088978723
+          ],
+          [
+            78.43510575007603,
+            17.394560018376374
+          ],
+          [
+            78.43506032407073,
+            17.394552185028758
+          ],
+          [
+            78.43501431711809,
+            17.394548664374355
+          ],
+          [
+            78.43496817228707,
+            17.39454949031832
+          ],
+          [
+            78.43492233397433,
+            17.394554654905996
+          ],
+          [
+            78.4348772436246,
+            17.394564108399504
+          ],
+          [
+            78.43483333547945,
+            17.394577759756807
+          ],
+          [
+            78.43479103239544,
+            17.394595477508418
+          ],
+          [
+            78.4347507417718,
+            17.39461709102354
+          ],
+          [
+            78.4347128516272,
+            17.39464239215329
+          ],
+          [
+            78.43467772686287,
+            17.394671137235267
+          ],
+          [
+            78.43464570574857,
+            17.394703049440054
+          ],
+          [
+            78.43461709666475,
+            17.394737821437236
+          ],
+          [
+            78.4345921751329,
+            17.394775118355074
+          ],
+          [
+            78.43457118116191,
+            17.39481458100544
+          ],
+          [
+            78.4345543169368,
+            17.394855829342937
+          ],
+          [
+            78.43454174487131,
+            17.39489846612488
+          ],
+          [
+            78.43453358604388,
+            17.394942080736936
+          ],
+          [
+            78.43452991903138,
+            17.394986253147493
+          ],
+          [
+            78.43453077915227,
+            17.395030557952744
+          ],
+          [
+            78.43453615812642,
+            17.395074568473564
+          ],
+          [
+            78.43454600415465,
+            17.395117860864666
+          ],
+          [
+            78.43456022241747,
+            17.395160018196382
+          ],
+          [
+            78.43457867598813,
+            17.39520063447001
+          ],
+          [
+            78.43460118715122,
+            17.3952393185278
+          ],
+          [
+            78.43462753911403,
+            17.39527569782004
+          ],
+          [
+            78.4346574780943,
+            17.395309421992955
+          ],
+          [
+            78.43469071576425,
+            17.395340166262887
+          ],
+          [
+            78.44145306858294,
+            17.40100773978169
+          ]
+        ]
+      ]
+    }
+  },
+  "change_heatmap_url": "/api/projects/demo-road-test/images/heatmap_overlay.png",
+  "explanation": "Automated multispectral analysis of 3 Sentinel-2 observations indicates an observable surface progress of 26.8% within the designated road corridor, compared to an expected schedule benchmark of 77.2% (variance: -50.4%). Vegetation clearing (NDVI drop score: 0.087) and earthwork soil disturbance (reflectance score: 0.111) were detected in early sections, but spatial continuity across the full corridor remains incomplete. Calculated confidence is 84.6% based on high temporal consistency (0.5) and clear optical observation passes. Conclusion: Potential Schedule Discrepancy. Independent ground inspection is recommended."
+}

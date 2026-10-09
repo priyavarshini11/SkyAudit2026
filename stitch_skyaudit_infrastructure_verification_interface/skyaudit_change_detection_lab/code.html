@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-container":"#007bb9","on-error":"#ffffff","surface-container-lowest":"#ffffff","surface-tint":"#006398","secondary-fixed-dim":"#b4c5ff","surface-container-high":"#dce9ff","secondary-container":"#316bf3","secondary-fixed":"#dbe1ff","on-tertiary":"#ffffff","on-primary-fixed":"#001d31","surface-dim":"#cbdbf5","tertiary-fixed-dim":"#bec6e0","surface":"#f8f9ff","on-tertiary-fixed-variant":"#3f465c","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","outline-variant":"#bfc7d2","error":"#ba1a1a","secondary":"#0051d5","on-primary-container":"#fdfcff","surface-container-low":"#eff4ff","tertiary-fixed":"#dae2fd","inverse-primary":"#93ccff","tertiary":"#545c72","primary-fixed":"#cce5ff","primary-fixed-dim":"#93ccff","on-tertiary-fixed":"#131b2e","inverse-surface":"#213145","primary":"#006194","on-primary":"#ffffff","on-surface":"#0b1c30","on-surface-variant":"#3f4850","tertiary-container":"#6c748b","surface-container":"#e5eeff","outline":"#707881","surface-variant":"#d3e4fe","background":"#f8f9ff","on-secondary-container":"#fefcff","on-primary-fixed-variant":"#004b73","surface-bright":"#f8f9ff","on-error-container":"#93000a","on-secondary-fixed":"#00174b","on-tertiary-container":"#fefcff","on-secondary":"#ffffff","on-background":"#0b1c30","on-secondary-fixed-variant":"#003ea8","error-container":"#ffdad6"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","space-xl":"1.75rem","gutter-compact":"0.75rem","space-xs":"0.25rem","space-2xl":"2.5rem","gutter":"1rem","space-md":"0.75rem","space-sm":"0.5rem","space-lg":"1.25rem","margin":"1.5rem"},fontFamily:{"headline-sm":["Manrope"],"body-sm":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"headline-md":["Manrope"],"headline-lg":["Manrope"],"label-sm":["Inter"],"code-tabular":["Inter"],"headline-xl":["Manrope"]},fontSize:{"headline-sm":["15px",{lineHeight:"20px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-md":["18px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg":["22px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"600"}],"code-tabular":["12px",{lineHeight:"16px",letterSpacing:"0.005em",fontWeight:"500"}],"headline-xl":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1"><div class="h-14 px-margin flex items-center border-b border-outline-variant/20 gap-space-sm"><div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[16px]">satellite_alt</span></div><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none truncate">SkyAudit</span><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase leading-tight font-semibold text-[9px]">SATELLITE VERIFICATION</span></div></div><div class="px-margin-sm py-space-sm"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold text-[10px]">Workstation Navigation</span></div><nav class="flex-1 px-space-xs space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold border-l-2 border-primary"><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">space_dashboard</span><span>Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="projects" href="#"><span class="material-symbols-outlined text-[18px]">inventory_2</span><span>Projects</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="geospatial-analysis" href="#"><span class="material-symbols-outlined text-[18px]">public</span><span>Geospatial Analysis</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2 rounded-lg transition-colors bg-surface-container text-primary font-semibold border-l-2 border-primary" data-path="change-detection" href="#"><span class="material-symbols-outlined text-[18px]">compare</span><span>Change Detection</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="evidence-and-milestones" href="#"><span class="material-symbols-outlined text-[18px]">verified</span><span>Evidence &amp; Milestones</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span>Reports</span></a></nav></div><div class="flex flex-col border-t border-outline-variant/20 p-space-sm gap-space-xs"><nav class="space-y-0.5" data-active-classes="bg-surface-container text-primary font-semibold"><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="help-and-support" href="#"><span class="material-symbols-outlined text-[18px]">help</span><span>Help &amp; Support</span></a></nav><div class="mt-space-xs p-space-sm rounded-lg bg-surface-container-low border border-outline-variant/30 flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Data Stream</span><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-code-tabular text-code-tabular text-on-surface font-semibold text-[10px]">Online</span></div></div><div class="flex items-center justify-between text-on-surface-variant text-[10px] font-label-sm"><span class="truncate">Sentinel-2 MSI Level-2A</span><span class="font-code-tabular text-code-tabular text-primary font-semibold">10m Res</span></div></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 z-40 px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-md"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-outline text-[18px] pointer-events-none">search</span><input class="w-full h-8 pl-8 pr-12 rounded-lg bg-surface border border-outline-variant/40 text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary transition-colors" placeholder="Search projects, location, or ID..." type="text"/><div class="absolute right-space-sm px-1 py-0.5 rounded border border-outline-variant/40 bg-surface-container-lowest font-code-tabular text-[10px] text-outline leading-none">⌘K</div></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center h-8 px-space-sm gap-space-xs rounded-lg border border-outline-variant/40 bg-surface text-on-surface text-body-sm font-body-sm hover:border-outline transition-colors cursor-pointer"><span class="material-symbols-outlined text-[16px] text-outline">calendar_today</span><span class="font-code-tabular text-code-tabular text-on-surface">Jan 2025 – Dec 2026</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div><button class="flex items-center h-8 px-space-md gap-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">file_download</span><span>Export</span></button><div class="h-4 w-px bg-outline-variant/40 mx-space-xs"></div><button aria-label="Notifications" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-sm text-label-sm text-on-surface leading-tight font-semibold">John Doe</span><span class="font-label-sm text-label-sm text-outline text-[10px] leading-tight">Analyst</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-14 flex-1 w-full bg-background"><div class="flex flex-col w-full p-margin gap-margin">
+<!-- Top Navigation & Header Row -->
+<div class="flex flex-col gap-space-xs">
+<a class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm w-fit" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Back to Projects</span>
+</a>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Change Detection</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Analyze multi-temporal satellite imagery to detect changes and assess construction progress.</p>
+</div>
+</div>
+</div>
+<!-- Project Summary Strip -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-[280px]">
+<div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High resolution satellite photograph of an active linear highway construction project cutting through rural green landscapes with red earth clearing visible from high orbit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLcIotUlCOh_fnWe_CqyBUIrS6fvXyI_MBofmExQ3o9GT93xc62n2HLOvXUXa6WPLdJACYt08KWD8EbpFDpG7ZTtKvMy6cJ7l47tal3lkS3FDDCzGFQ1eEzHYowO6TJSvAwiRcORTHxnnszS9HDJprvAtfGnn_2L_nIz9yaJOnTtg4dwmHuE-8_qUm6I-O2O_-IFuOup3A5IbyLyjL2KyjAlpkSkt9Lfvzigh0T6oB"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Chennai–Bengaluru Highway (Section 3)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase">Road</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="font-code-tabular text-code-tabular">ID: NH-48-S3-2025</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">location_on</span>Kanchipuram, Tamil Nadu</span>
+</div>
+</div>
+</div>
+<!-- Metadata Attributes -->
+<div class="flex items-center flex-wrap gap-x-6 gap-y-2">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">engineering</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Contractor</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">XYZ Infra Pvt. Ltd.</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">straighten</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Total Length</span>
+<span class="font-code-tabular text-code-tabular text-on-surface font-semibold">24.5 km</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Budget</span>
+<span class="font-code-tabular text-code-tabular text-on-surface font-semibold">₹ 68.50 Cr</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">event_available</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Expected Completion</span>
+<span class="font-code-tabular text-code-tabular text-on-surface font-semibold">2026-12-31</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub-Toolbar: Pass Selection & View Mode Controls -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center flex-wrap gap-space-sm">
+<div class="flex items-center gap-2 px-space-md py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-outline text-[16px]">history</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline leading-tight">T0 (Baseline)</span>
+<span class="font-code-tabular text-code-tabular text-on-surface font-semibold">2025-03-12</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-space-md py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">update</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline leading-tight">T2 (Latest)</span>
+<span class="font-code-tabular text-code-tabular text-primary font-semibold">2025-09-04</span>
+</div>
+</div>
+<button class="h-9 px-space-md flex items-center gap-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-low transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">compare_arrows</span>
+<span>Compare</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-1 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-outline px-2">View Mode</span>
+<div class="flex items-center gap-0.5 bg-surface-container-low p-0.5 rounded-md">
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm font-semibold" type="button">Split</button>
+<button class="px-3 py-1 rounded text-on-surface-variant font-label-md text-label-md hover:text-on-surface" type="button">Swipe</button>
+<button class="px-3 py-1 rounded text-on-surface-variant font-label-md text-label-md hover:text-on-surface" type="button">Overlay</button>
+</div>
+</div>
+</div>
+<!-- Primary Workstation Grid: Split Map (Left) & Inspector Sidebar (Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-margin items-start">
+<!-- Left Column: Split Satellite Viewport & Thumbnail Strip -->
+<div class="lg:col-span-8 flex flex-col gap-margin">
+<!-- Split Map Viewport Container -->
+<div class="relative w-full h-[520px] rounded-xl overflow-hidden shadow-md select-none bg-surface-dim group">
+<!-- Left Image Pane (T0 Baseline) -->
+<div class="absolute inset-0 w-full h-full overflow-hidden" id="split-left-pane" style="clip-path: polygon(0 0, 52% 0, 52% 100%, 0 100%);">
+<div class="w-full h-full bg-cover bg-center" data-alt="Dense satellite optical remote sensing view of South Indian agricultural land in March 2025 before highway clearing with green scrubland and dirt tracks." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCA89Ykwesou3Gdx9Z1XqiuhtTCH2YYVUF7LsxnZsxcb9N6TYhMoXVsWtVx5ORr72Ai3tXMG24UFqAW8YotXF2yQLF3LObebs0qs9yWpQ2X4OeQUSjRoVqyqtM-F9BzGGEMDP68aybq_bTUo9RJGK43keiTI8Uz_BiiV3ljUljKeMSLqQu3kFbKhYXuGQsYiJJDYlOes8UFTb7BiY5JRcKJZq--jKLCG5qGPI0A4XQl')">
+<!-- Simulated corridor overlay on T0 -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<path d="M 50 420 Q 220 370 340 310 T 580 270 T 820 180" fill="none" stroke="rgba(0, 123, 185, 0.4)" stroke-linecap="round" stroke-width="32"></path>
+<path d="M 50 420 Q 220 370 340 310 T 580 270 T 820 180" fill="none" stroke="#007bb9" stroke-dasharray="6 4" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+<!-- Right Image Pane (T2 Latest Construction) -->
+<div class="absolute inset-0 w-full h-full overflow-hidden" id="split-right-pane" style="clip-path: polygon(52% 0, 100% 0, 100% 100%, 52% 100%);">
+<div class="w-full h-full bg-cover bg-center" data-alt="Satellite imagery taken in September 2025 of active civil highway earthworks corridor cutting across the landscape showing cleared brownish-orange road bed and asphalt grading." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSeuh5d3lCwqEJvxbHDKnSgiwx3_CJOdFNJMKsVlOwTHpap8knIsPNaoRWQ-zkUPK5EBB4k2HERrTIqnQ39FWF2Wg0Xk7OtlZ9G42Hdi0_V4P180U1My9pH4QX7qvt4d-Dv7erVIzjVFzm-K0q3hF5VGgmBZ3L7waawYkgVhqvyN0EdAB4FCxcU6WReWmwRhYUoz87dH94CodasJlOsWobCgNjuOJRKhbPFJTpzx6_')">
+<!-- Simulated corridor overlay on T2 with Heatmap & Chainages -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<!-- Heatmap gradient track -->
+<path d="M 50 420 Q 220 370 340 310 T 580 270 T 820 180" fill="none" stroke="rgba(0, 97, 148, 0.6)" stroke-linecap="round" stroke-width="36"></path>
+<path d="M 220 370 Q 340 310 580 270" fill="none" stroke="rgba(49, 107, 243, 0.7)" stroke-linecap="round" stroke-width="24"></path>
+<path d="M 400 295 Q 520 275 680 220" fill="none" stroke="rgba(186, 26, 26, 0.75)" stroke-linecap="round" stroke-width="18"></path>
+<path d="M 50 420 Q 220 370 340 310 T 580 270 T 820 180" fill="none" stroke="#ffffff" stroke-dasharray="4 4" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Interactive Split Handle -->
+<div class="absolute top-0 bottom-0 left-[52%] w-[2px] bg-white cursor-ew-resize pointer-events-none z-20 flex items-center justify-center -translate-x-1/2" id="split-slider-line">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface shadow-md flex items-center justify-center pointer-events-auto cursor-ew-resize hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[16px] text-primary">drag_indicator</span>
+</div>
+</div>
+<!-- Floating Chainage Pins on Viewport -->
+<div class="absolute left-[12%] bottom-[28%] z-10 pointer-events-none">
+<span class="px-2 py-0.5 rounded bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-code-tabular text-code-tabular font-semibold">CH 5+000</span>
+</div>
+<div class="absolute left-[36%] bottom-[46%] z-10 pointer-events-none">
+<span class="px-2 py-0.5 rounded bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-code-tabular text-code-tabular font-semibold">CH 10+000</span>
+</div>
+<div class="absolute left-[58%] top-[45%] z-10 pointer-events-none">
+<span class="px-2 py-0.5 rounded bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-code-tabular text-code-tabular font-semibold">CH 15+000</span>
+</div>
+<div class="absolute right-[22%] top-[34%] z-10 pointer-events-none">
+<span class="px-2 py-0.5 rounded bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-code-tabular text-code-tabular font-semibold">CH 20+000</span>
+</div>
+<!-- Floating Map Utility Tools (Top Left) -->
+<div class="absolute top-space-md left-space-md z-20 flex flex-col gap-1.5">
+<div class="flex flex-col bg-surface-container-lowest/90 backdrop-blur rounded-lg shadow-sm p-1">
+<button aria-label="Zoom in" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container-low rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<div class="h-px bg-outline-variant/30 my-0.5"></div>
+<button aria-label="Zoom out" class="w-7 h-7 flex items-center justify-center text-on-surface hover:bg-surface-container-low rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+</div>
+<button aria-label="Map Settings" class="w-9 h-9 bg-surface-container-lowest/90 backdrop-blur rounded-lg shadow-sm flex items-center justify-center text-on-surface hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<button aria-label="Base Layers" class="w-9 h-9 bg-surface-container-lowest/90 backdrop-blur rounded-lg shadow-sm flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">layers</span>
+</button>
+</div>
+<!-- Floating Layers Control Box (Top Right) -->
+<div class="absolute top-space-md right-space-md z-20 w-52 bg-surface-container-lowest/95 backdrop-blur rounded-xl shadow-md p-space-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline font-semibold">Layers</span>
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+</div>
+<div class="space-y-1.5">
+<label class="flex items-center gap-2 cursor-pointer text-body-sm font-body-sm text-on-surface">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span>Road Centerline</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer text-body-sm font-body-sm text-on-surface">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span>50m Corridor Buffer</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer text-body-sm font-body-sm text-on-surface">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span>Change Heatmap</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer text-body-sm font-body-sm text-on-surface">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary focus:ring-0 accent-primary" type="checkbox"/>
+<span>Satellite Imagery (RGB)</span>
+</label>
+</div>
+<div class="pt-1.5 flex flex-col gap-1">
+<div class="h-2 w-full rounded-full bg-gradient-to-r from-primary via-secondary-container to-error"></div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline text-[10px]">
+<span>Low Change</span>
+<span>High Change</span>
+</div>
+</div>
+</div>
+<!-- Persistent Corner Timestamp Overlays -->
+<div class="absolute bottom-space-md left-space-md z-10 px-2.5 py-1 rounded-md bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-code-tabular text-code-tabular flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span>T0 - 2025-03-12</span>
+</div>
+<div class="absolute bottom-space-md right-space-md z-10 px-2.5 py-1 rounded-md bg-inverse-surface/85 backdrop-blur text-inverse-on-surface font-code-tabular text-code-tabular flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>T2 - 2025-09-04</span>
+</div>
+</div>
+<!-- Bottom Gallery: Change Heatmap & Spectral Indices -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Change Heatmap &amp; Spectral Indices</h2>
+<span class="font-label-sm text-label-sm text-outline">5 Assets Rendered</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-space-sm">
+<!-- Card 1: RGB T0 -->
+<div class="flex flex-col rounded-lg overflow-hidden bg-surface-container-low p-1.5 hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="h-20 w-full rounded bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Satellite optical visual band rendering showing untouched farmland corridor for baseline evaluation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdJHD0_7P8seu2P1DAqGdkqJoLMJIAn5ZXQ3zkw1S2wvWB7q48EjaQVu---AaFUfoVE1_V_pMjdUddj2gk9mvF6HQrhv2tlTQozmCIQaeR7hA_C27Zf6HnoxgUaIb_YIIucJOxctz1U1hisSGz6a_4pRQAscLXsJZKaJheb0CPlrvxHGwFnTEfK_yKBIvk84MbTyDw2VCgelksNum5G0YJeu5GymNKeDpMJfr2asm2"/>
+</div>
+<div class="flex flex-col mt-1.5 px-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">RGB (T0)</span>
+<span class="font-code-tabular text-code-tabular text-outline text-[10px]">2025-03-12</span>
+</div>
+</div>
+<!-- Card 2: RGB T2 -->
+<div class="flex flex-col rounded-lg overflow-hidden bg-surface-container-low p-1.5 hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="h-20 w-full rounded bg-surface-dim overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Satellite optical visual band rendering showing highway corridor earth clearing and grader activity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP18NYXryRZv6xySakY-zo5VNWh96T7W0OQVSeTabXyjpsiv1BNg44Uu0MEtq8VAvNBEf_bBTAlOK3OZ6dICqKgJaCNMIq1JJLsVwxbglXSZeeeXmGrtaixSFNlxK_v-_oPnSQZ2uud1y_iB5WRipU7rh7bYaHEyQJNbY0IKFVYegjZiKVLT7YlqnokmeK729vsmXqiPgTew1sOYa9sx9lCGOK-gkDzGxAHQYIUNMs"/>
+</div>
+<div class="flex flex-col mt-1.5 px-0.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">RGB (T2)</span>
+<span class="font-code-tabular text-code-tabular text-outline text-[10px]">2025-09-04</span>
+</div>
+</div>
+<!-- Card 3: Change Heatmap (Selected) -->
+<div class="flex flex-col rounded-lg overflow-hidden bg-surface-container-high p-1.5 shadow-sm ring-1 ring-primary cursor-pointer group">
+<div class="h-20 w-full rounded overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Scientific false color multispectral change heatmap highlighting ground disturbance along the linear road buffer in bright reds, yellow, and deep cyan background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLQhOfCHQp-iNaDw0OH8K9La66saaSymxMVxhLaNQ0PUgGhr69dDZr04fUMJ4sdG7oH7jydlIFt9MGr_oWcaK1oqHCv05bKkn8yNwMMM5BdtpK29aSOw5UpM6seHiachfG3PQ4nXK1zRMo_Q_Ss1b8FRuFGAFEMKJ5JBgB5UG19RuIcf1IvL5q-mSpGI7nMFOMLzNUB6kyBOu2LlQBzPF1PkfawRo88S66UXDwsQAd"/>
+<div class="absolute top-1 right-1 px-1 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[9px] uppercase leading-none">Active</div>
+</div>
+<div class="flex flex-col mt-1.5 px-0.5">
+<span class="font-label-sm text-label-sm text-primary font-semibold truncate">Change Heatmap</span>
+<span class="font-code-tabular text-code-tabular text-primary-container text-[10px]">T0 → T2</span>
+</div>
+</div>
+<!-- Card 4: NDVI T2 -->
+<div class="flex flex-col rounded-lg overflow-hidden bg-surface-container-low p-1.5 hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="h-20 w-full rounded bg-surface-dim overflow-hidden flex relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Normalized Difference Vegetation Index greyscale visualization showing drop in biomass density along linear corridor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzG1nn3YnmIJ_bvXcbz2YwOeiRTcWBl_DIxw3OQu95TlKdi4aOuaHF4NiiE_w9bCXxzFhP9Ap9BZdRtJhx3dicfUnODdgsswfms3InJAMpvcWC4mj8Tmr1PnRbnqOdBfq6ZO7Lcg_GTeXDCA4YNJ_l_L4avKtFRqmkd8LceACxgS7WWufTKAV9OpksGw5TBjfQsk933f_zFOqv_6ZY3beKRqOV6cX8qw8abQnweEDh"/>
+<div class="absolute right-1 top-1 bottom-1 w-1 rounded-full bg-gradient-to-b from-white via-surface-variant to-inverse-surface"></div>
+</div>
+<div class="flex items-center justify-between mt-1.5 px-0.5">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">NDVI (T2)</span>
+<span class="font-code-tabular text-code-tabular text-outline text-[10px]">2025-09-12</span>
+</div>
+<span class="font-code-tabular text-code-tabular text-outline text-[9px] leading-tight text-right">1.0<br/>0.0</span>
+</div>
+</div>
+<!-- Card 5: BSI T2 -->
+<div class="flex flex-col rounded-lg overflow-hidden bg-surface-container-low p-1.5 hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="h-20 w-full rounded bg-surface-dim overflow-hidden flex relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Bare Soil Index greyscale raster display highlighting newly exposed subgrade soil layers along road alignment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzbwt8A31m4TUXRMo9ieSWP3tSGjiUkvTluMiAU_nMbNyaS3_8Q8jbaj-hx-NoX2AUhNLKqcxCEGRvXDqq1g8j9WTf3pnSk3B8Bs9rPtdng2nytrZcptvjk4iw-osYd-T6T_tbMhjRaNlZ9Z-SLdRhBsuTysgtaWtXX4GTEtEXoN4W1uebkM_Ih3rHInNzRvZVf7rzj1c1xkGInwNqirDkya36wliHdqYdujN4mPJB"/>
+<div class="absolute right-1 top-1 bottom-1 w-1 rounded-full bg-gradient-to-b from-white via-surface-variant to-inverse-surface"></div>
+</div>
+<div class="flex items-center justify-between mt-1.5 px-0.5">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">BSI (T2)</span>
+<span class="font-code-tabular text-code-tabular text-outline text-[10px]">2025-09-22</span>
+</div>
+<span class="font-code-tabular text-code-tabular text-outline text-[9px] leading-tight text-right">1.0<br/>0.0</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Verification Results & Analysis Sidebar -->
+<div class="lg:col-span-4 flex flex-col gap-margin">
+<!-- Top Title -->
+<h2 class="font-headline-md text-headline-md text-on-surface">Change Detection Results</h2>
+<!-- Metrics Grid (2x2) -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- NDVI Drop Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between h-28">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">NDVI Drop</span>
+<div class="w-6 h-6 rounded-md bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[15px]">eco</span>
+</div>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold leading-none">0.42</div>
+<span class="font-label-sm text-label-sm text-outline mt-1 block">(higher change)</span>
+</div>
+</div>
+<!-- BSI Increase Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between h-28">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">BSI Increase</span>
+<div class="w-6 h-6 rounded-md bg-surface-container-low flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[15px]">terrain</span>
+</div>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold leading-none">0.36</div>
+<span class="font-label-sm text-label-sm text-outline mt-1 block">(more bare soil)</span>
+</div>
+</div>
+<!-- Change Coverage Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between h-28">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">Change Coverage</span>
+<div class="w-6 h-6 rounded-md bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[15px]">crop_free</span>
+</div>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold leading-none">38%</div>
+<span class="font-label-sm text-label-sm text-outline mt-1 block">of corridor area</span>
+</div>
+</div>
+<!-- Change Confidence Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between h-28">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">Change Confidence</span>
+<div class="w-6 h-6 rounded-md bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+</div>
+</div>
+<div>
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold leading-none">78%</div>
+<span class="font-label-sm text-label-sm text-outline mt-1 block">high reliability</span>
+</div>
+</div>
+</div>
+<!-- Schedule Discrepancy Alert Banner -->
+<a class="w-full bg-error-container/60 hover:bg-error-container/80 transition-colors rounded-xl p-space-md flex items-center justify-between gap-space-sm text-error group" href="#">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-error shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-error leading-tight">Potential Schedule Discrepancy</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Observed progress is lower than expected.</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-error group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+<!-- Spectral Analysis Graph Widget -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Spectral Analysis</h3>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-outline">
+<button class="px-2 py-0.5 rounded bg-surface-container text-primary font-semibold" type="button">NDVI</button>
+<button class="px-2 py-0.5 rounded hover:text-on-surface" type="button">BSI</button>
+<button class="px-2 py-0.5 rounded hover:text-on-surface" type="button">Difference</button>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex items-center justify-end gap-4 font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>T0 (Baseline)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>T2 (Latest)</span>
+</div>
+</div>
+<!-- SVG Temporal Trend Line Chart -->
+<div class="w-full h-36 relative flex flex-col justify-between">
+<svg class="w-full h-28 overflow-visible" preserveaspectratio="none" viewbox="0 0 320 90">
+<!-- Grid Lines -->
+<line stroke="#eff4ff" stroke-width="1" x1="0" x2="320" y1="10" y2="10"></line>
+<line stroke="#eff4ff" stroke-width="1" x1="0" x2="320" y1="45" y2="45"></line>
+<line stroke="#eff4ff" stroke-width="1" x1="0" x2="320" y1="80" y2="80"></line>
+<!-- T0 Baseline Line (teal-cyan) -->
+<path d="M 10 25 Q 120 40 200 55 T 310 65" fill="none" stroke="#007bb9" stroke-width="2"></path>
+<circle cx="10" cy="25" fill="#007bb9" r="3"></circle>
+<circle cx="155" cy="46" fill="#007bb9" r="3"></circle>
+<circle cx="310" cy="65" fill="#007bb9" r="3"></circle>
+<!-- T2 Latest Line (blue) -->
+<path d="M 10 35 Q 120 52 200 68 T 310 82" fill="none" stroke="#316bf3" stroke-width="2"></path>
+<circle cx="10" cy="35" fill="#316bf3" r="3"></circle>
+<circle cx="155" cy="58" fill="#316bf3" r="3"></circle>
+<circle cx="310" cy="82" fill="#316bf3" r="3"></circle>
+</svg>
+<!-- X Axis Dates -->
+<div class="flex items-center justify-between font-code-tabular text-code-tabular text-outline text-[11px] px-1">
+<span>Mar 2025</span>
+<span>Jun 2025</span>
+<span>Sep 2025</span>
+</div>
+</div>
+</div>
+<!-- Key Findings Summary Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Key Findings</h3>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
+<span>Significant vegetation loss in corridor (NDVI ↓ 0.42)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
+<span>Increased bare soil exposure (BSI ↑ 0.36)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
+<span>Construction activity visible in T2 imagery</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
+<span>Change concentrated between CH 5+000 and CH 20+000</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    const sliderLine = document.getElementById('split-slider-line');
+    const leftPane = document.getElementById('split-left-pane');
+    const rightPane = document.getElementById('split-right-pane');
+    const container = sliderLine ? sliderLine.parentElement : null;
+
+    if (!sliderLine || !container || !leftPane || !rightPane) return;
+
+    let isDragging = false;
+
+    const setPosition = (clientX) => {
+      const rect = container.getBoundingClientRect();
+      let offsetX = clientX - rect.left;
+      let percentage = (offsetX / rect.width) * 100;
+      percentage = Math.max(10, Math.min(90, percentage));
+
+      sliderLine.style.left = `${percentage}%`;
+      leftPane.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+      rightPane.style.clipPath = `polygon(${percentage}% 0, 100% 0, 100% 100%, ${percentage}% 100%)`;
+    };
+
+    sliderLine.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      e.preventDefault();
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      setPosition(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    // Touch support for mobile/trackpad devices
+    sliderLine.addEventListener('touchstart', (e) => {
+      isDragging = true;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging || !e.touches[0]) return;
+      setPosition(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+  })();
+</script></main></div></body></html>

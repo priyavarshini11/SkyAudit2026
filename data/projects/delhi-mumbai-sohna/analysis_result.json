@@ -1,0 +1,603 @@
+{
+  "project_id": "delhi-mumbai-sohna",
+  "project_name": "Delhi-Mumbai Expressway (NHAI Package 1 • Sohna-Kolgaon)",
+  "analyzed_at": "2026-10-08 20:18 UTC",
+  "expected_progress": 100.0,
+  "observable_progress": 36.9,
+  "confidence": 75.0,
+  "discrepancy": {
+    "status": "Potential Schedule Discrepancy",
+    "status_category": "potential_discrepancy",
+    "severity": "high",
+    "discrepancy_gap_pct": 63.1,
+    "explanation": "Expected completion is at 100.0% based on contractual milestones, but multi-temporal satellite observations indicate only 36.9% observable surface change (confidence: 75.0%). Physical corridor evidence indicates clearing/paving is significantly behind schedule.",
+    "recommendations": [
+      "Prioritize for immediate targeted on-site engineering inspection.",
+      "Request contractor interim billing and material delivery manifests.",
+      "Cross-reference recent milestone completion claims against satellite corridor segments."
+    ]
+  },
+  "metrics": {
+    "spatial_change_score": 0.151,
+    "temporal_consistency": 0.5,
+    "construction_feature_score": 0.298,
+    "milestone_alignment": 0.256,
+    "image_quality": 0.92,
+    "ndvi_drop_score": 0.05,
+    "surface_reflectance_score": 0.556
+  },
+  "progress_breakdown": {
+    "vegetation_clearance_contribution": 3.0,
+    "surface_disturbance_contribution": 13.9,
+    "corridor_continuity_contribution": 5.0,
+    "built_paved_signal_contribution": 7.4,
+    "temporal_consistency_contribution": 7.5,
+    "formula_used": "0.15×veg_clearance + 0.25×surface_disturbance + 0.20×corridor_continuity + 0.25×built_paved + 0.15×temporal_consistency"
+  },
+  "confidence_breakdown": {
+    "image_quality_weight": 27.6,
+    "observation_coverage_weight": 25.0,
+    "temporal_consistency_weight": 12.5,
+    "indicator_agreement_weight": 9.9,
+    "formula_used": "0.30×image_quality + 0.25×observation_coverage + 0.25×temporal_consistency + 0.20×indicator_agreement"
+  },
+  "observations": [
+    {
+      "id": "obs-T0_Pre_construction_baseline",
+      "date": "2019-04-30",
+      "source": "Sentinel-2",
+      "cloud_cover": 0.0,
+      "resolution_m": 10.0,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "file_path": "C:\\Users\\mysel\\OneDrive\\Desktop\\SkyAudit\\data\\projects\\delhi-mumbai-sohna\\before.tif",
+      "preview_url": "/api/projects/delhi-mumbai-sohna/images/before.png",
+      "mean_ndvi": 0.184,
+      "mean_surface_reflectance": null,
+      "corridor_coverage_pct": 100.0
+    },
+    {
+      "id": "obs-T1_Construction_stage_observation",
+      "date": "2021-03-20",
+      "source": "Sentinel-2",
+      "cloud_cover": 0.0,
+      "resolution_m": 10.0,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "file_path": "C:\\Users\\mysel\\OneDrive\\Desktop\\SkyAudit\\data\\projects\\delhi-mumbai-sohna\\middle.tif",
+      "preview_url": "/api/projects/delhi-mumbai-sohna/images/middle.png",
+      "mean_ndvi": 0.345,
+      "mean_surface_reflectance": null,
+      "corridor_coverage_pct": 100.0
+    },
+    {
+      "id": "obs-T2_Post_construction_observation",
+      "date": "2023-03-10",
+      "source": "Sentinel-2",
+      "cloud_cover": 0.0,
+      "resolution_m": 10.0,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "file_path": "C:\\Users\\mysel\\OneDrive\\Desktop\\SkyAudit\\data\\projects\\delhi-mumbai-sohna\\after.tif",
+      "preview_url": "/api/projects/delhi-mumbai-sohna/images/after.png",
+      "mean_ndvi": 0.436,
+      "mean_surface_reflectance": null,
+      "corridor_coverage_pct": 100.0
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2019-02-15",
+      "phase": "Project Initiation",
+      "title": "Contract Award & Project Kickoff",
+      "description": "Initial tender baseline established for 'Delhi-Mumbai Expressway (NHAI Package 1 • Sohna-Kolgaon)'. Total scope: 18.4 km.",
+      "observation_id": null,
+      "change_level": "baseline",
+      "metrics": {},
+      "key_findings": [
+        "Contract agreement executed",
+        "Corridor right-of-way defined"
+      ]
+    },
+    {
+      "date": "2019-04-30",
+      "phase": "Baseline Observation",
+      "title": "Pre-Construction Satellite Pass",
+      "description": "Sentinel-2 baseline imagery captured. Natural undisturbed terrain (Mean NDVI: 0.184).",
+      "observation_id": "obs-T0_Pre_construction_baseline",
+      "change_level": "low",
+      "metrics": {
+        "cloud_cover": 0.0,
+        "mean_ndvi": 0.184
+      },
+      "key_findings": [
+        "Clean optical conditions",
+        "Intact baseline canopy along corridor"
+      ]
+    },
+    {
+      "date": "2021-03-20",
+      "phase": "Mid-term Earthworks",
+      "title": "Earthwork & Land Clearing Detected",
+      "description": "Multispectral analysis indicates clear vegetation removal and initial cut-and-fill soil disturbance.",
+      "observation_id": "obs-T1_Construction_stage_observation",
+      "change_level": "moderate",
+      "metrics": {
+        "cloud_cover": 0.0,
+        "ndvi_drop": 0.05
+      },
+      "key_findings": [
+        "Vegetation clearing confirmed",
+        "Earthwork active on initial road segments"
+      ]
+    },
+    {
+      "date": "2023-03-10",
+      "phase": "Current State",
+      "title": "Latest Observation Pass",
+      "description": "Surface reflectance analysis shows partial asphalt/subbase laying. Total observable corridor progress: 36.9%.",
+      "observation_id": "obs-T2_Post_construction_observation",
+      "change_level": "moderate",
+      "metrics": {
+        "cloud_cover": 0.0,
+        "surface_score": 0.556
+      },
+      "key_findings": [
+        "Paving and subbase detected on partial chainage",
+        "Remaining segments unworked"
+      ]
+    }
+  ],
+  "corridor_geojson": {
+    "type": "Feature",
+    "properties": {
+      "buffer_meters": 50.0,
+      "corridor_type": "road_buffer"
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            77.01925320695443,
+            28.189552358967077
+          ],
+          [
+            77.01925394615559,
+            28.189553035826243
+          ],
+          [
+            77.02385670541216,
+            28.19375856497972
+          ],
+          [
+            77.02385819806757,
+            28.193759923012507
+          ],
+          [
+            77.02842832243861,
+            28.19790018179241
+          ],
+          [
+            77.02843055119827,
+            28.197902188233066
+          ],
+          [
+            77.03295377932274,
+            28.201948653654064
+          ],
+          [
+            77.03295671056213,
+            28.20195125450179
+          ],
+          [
+            77.03742113265265,
+            28.20588010676799
+          ],
+          [
+            77.03742470759497,
+            28.205883221837247
+          ],
+          [
+            77.04182136264407,
+            28.209676538766136
+          ],
+          [
+            77.04182548632973,
+            28.20968005658196
+          ],
+          [
+            77.04614881145213,
+            28.213326712297498
+          ],
+          [
+            77.04615334118911,
+            28.213330486409813
+          ],
+          [
+            77.05040145056796,
+            28.21682670924076
+          ],
+          [
+            77.05040618686677,
+            28.21683055799989
+          ],
+          [
+            77.05458096631637,
+            28.220180119607676
+          ],
+          [
+            77.05458565073056,
+            28.22018383151963
+          ],
+          [
+            77.05869266313404,
+            28.22339785777224
+          ],
+          [
+            77.05869698803977,
+            28.223401203880872
+          ],
+          [
+            77.06274519440319,
+            28.226497616956195
+          ],
+          [
+            77.06274882838714,
+            28.22650037012638
+          ],
+          [
+            77.06675013849768,
+            28.22950298981991
+          ],
+          [
+            77.06675276689519,
+            28.22950494864991
+          ],
+          [
+            77.07072144211493,
+            28.232442297950985
+          ],
+          [
+            77.07072281600425,
+            28.232443311141427
+          ],
+          [
+            77.07467475414593,
+            28.235347185971197
+          ],
+          [
+            77.07471474551063,
+            28.23537374754611
+          ],
+          [
+            77.07475748405999,
+            28.235396709716664
+          ],
+          [
+            77.07480255819526,
+            28.235415851342417
+          ],
+          [
+            77.07484953382382,
+            28.235430988077177
+          ],
+          [
+            77.07489795853981,
+            28.23544197414447
+          ],
+          [
+            77.07494736598129,
+            28.235448703741472
+          ],
+          [
+            77.07499728032168,
+            28.235451112057998
+          ],
+          [
+            77.07504722085254,
+            28.235449175900655
+          ],
+          [
+            77.07509670661327,
+            28.235442913916284
+          ],
+          [
+            77.07514526102321,
+            28.235432386412224
+          ],
+          [
+            77.0751924164717,
+            28.235417694775627
+          ],
+          [
+            77.07523771882144,
+            28.235398980496875
+          ],
+          [
+            77.07528073178244,
+            28.235376423806944
+          ],
+          [
+            77.07532104111378,
+            28.23535024194154
+          ],
+          [
+            77.07535825861312,
+            28.235320687048965
+          ],
+          [
+            77.07539202585525,
+            28.235288043761653
+          ],
+          [
+            77.07542201764409,
+            28.23525262645491
+          ],
+          [
+            77.07544794514435,
+            28.235214776219205
+          ],
+          [
+            77.07546955866314,
+            28.23517485757519
+          ],
+          [
+            77.07548665005454,
+            28.235133254963092
+          ],
+          [
+            77.07549905472398,
+            28.235090369040257
+          ],
+          [
+            77.0755066532132,
+            28.23504661282256
+          ],
+          [
+            77.07550937235045,
+            28.23500240770678
+          ],
+          [
+            77.07550718595503,
+            28.234958179412327
+          ],
+          [
+            77.07550011508913,
+            28.234914353881297
+          ],
+          [
+            77.07548822785476,
+            28.234871353176455
+          ],
+          [
+            77.07547163873767,
+            28.2348295914166
+          ],
+          [
+            77.07545050750463,
+            28.234789470788414
+          ],
+          [
+            77.07542503766457,
+            28.234751377673234
+          ],
+          [
+            77.07539547450861,
+            28.23471567892612
+          ],
+          [
+            77.0753621027475,
+            28.2346827183429
+          ],
+          [
+            77.07532524376992,
+            28.23465281334936
+          ],
+          [
+            77.07137400408917,
+            28.23174946216436
+          ],
+          [
+            77.0674073430162,
+            28.22881361429688
+          ],
+          [
+            77.0634091774944,
+            28.22581336557956
+          ],
+          [
+            77.05936496311664,
+            28.222720017973213
+          ],
+          [
+            77.05526246603684,
+            28.219509538380304
+          ],
+          [
+            77.0510924051761,
+            28.216163776988235
+          ],
+          [
+            77.04684893455526,
+            28.212671387603386
+          ],
+          [
+            77.0425299397034,
+            28.209028401574063
+          ],
+          [
+            77.0381371358546,
+            28.205238425987346
+          ],
+          [
+            77.03367596762882,
+            28.201312457246573
+          ],
+          [
+            77.02915531969238,
+            28.19726832128054
+          ],
+          [
+            77.02458705608773,
+            28.193129770458846
+          ],
+          [
+            77.01998541307387,
+            28.188925284125315
+          ],
+          [
+            77.01536628723503,
+            28.184686643762138
+          ],
+          [
+            77.01532985895291,
+            28.184656341584486
+          ],
+          [
+            77.01529025397885,
+            28.184629349016884
+          ],
+          [
+            77.01524785372855,
+            28.184605926010054
+          ],
+          [
+            77.0152030665366,
+            28.184586298138104
+          ],
+          [
+            77.01515632372421,
+            28.184570654426295
+          ],
+          [
+            77.01510807544544,
+            28.18455914553059
+          ],
+          [
+            77.0150587863522,
+            28.184551882286893
+          ],
+          [
+            77.01500893111958,
+            28.18454893464366
+          ],
+          [
+            77.01495898987469,
+            28.18455033098827
+          ],
+          [
+            77.014909443573,
+            28.184556057873625
+          ],
+          [
+            77.01486076936678,
+            28.184566060147674
+          ],
+          [
+            77.0148134360099,
+            28.184580241484486
+          ],
+          [
+            77.01476789934395,
+            28.184598465311876
+          ],
+          [
+            77.01472459790814,
+            28.184620556126617
+          ],
+          [
+            77.01468394871627,
+            28.184646301184515
+          ],
+          [
+            77.01464634324063,
+            28.184675452549186
+          ],
+          [
+            77.01461214364208,
+            28.18470772947972
+          ],
+          [
+            77.01458167928214,
+            28.18474282113422
+          ],
+          [
+            77.01455524355119,
+            28.18478038956334
+          ],
+          [
+            77.01453309104271,
+            28.184820072964808
+          ],
+          [
+            77.0145154351014,
+            28.184861489167687
+          ],
+          [
+            77.01450244576843,
+            28.1849042393128
+          ],
+          [
+            77.01449424814354,
+            28.184947911693946
+          ],
+          [
+            77.01449092118015,
+            28.184992085722776
+          ],
+          [
+            77.01449249692483,
+            28.18503633597927
+          ],
+          [
+            77.01449896020824,
+            28.18508023630882
+          ],
+          [
+            77.01451024879123,
+            28.185123363926255
+          ],
+          [
+            77.01452625396378,
+            28.18516530348762
+          ],
+          [
+            77.01454682159196,
+            28.185205651090147
+          ],
+          [
+            77.01457175360197,
+            28.18524401816221
+          ],
+          [
+            77.01460080988768,
+            28.18528003520547
+          ],
+          [
+            77.01463371062279,
+            28.18531335535353
+          ],
+          [
+            77.01925320695443,
+            28.189552358967077
+          ]
+        ]
+      ]
+    }
+  },
+  "change_heatmap_url": "/api/projects/delhi-mumbai-sohna/images/heatmap_overlay.png",
+  "explanation": "Automated multispectral analysis of 3 Sentinel-2 observations indicates an observable surface progress of 36.9% within the designated road corridor, compared to an expected schedule benchmark of 100.0% (variance: -63.1%). Vegetation clearing (NDVI drop score: 0.05) and earthwork soil disturbance (reflectance score: 0.556) were detected in early sections, but spatial continuity across the full corridor remains incomplete. Calculated confidence is 75.0% based on high temporal consistency (0.5) and clear optical observation passes. Conclusion: Potential Schedule Discrepancy. Independent ground inspection is recommended."
+}

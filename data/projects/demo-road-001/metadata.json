@@ -1,0 +1,56 @@
+{
+  "project_id": "demo-road-001",
+  "observations": [
+    {
+      "id": "obs-01",
+      "date": "2026-02-15",
+      "source": "Sentinel-2 L2A",
+      "cloud_cover": 1.2,
+      "resolution_m": 10.0,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "file_path": "data/projects\\demo-road-001\\before.tif",
+      "preview_url": "/api/projects/demo-road-001/images/before.png",
+      "mean_ndvi": 0.74,
+      "corridor_coverage_pct": 100.0
+    },
+    {
+      "id": "obs-02",
+      "date": "2026-06-20",
+      "source": "Sentinel-2 L2A",
+      "cloud_cover": 4.5,
+      "resolution_m": 10.0,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "file_path": "data/projects\\demo-road-001\\middle.tif",
+      "preview_url": "/api/projects/demo-road-001/images/middle.png",
+      "mean_ndvi": 0.48,
+      "corridor_coverage_pct": 98.5
+    },
+    {
+      "id": "obs-03",
+      "date": "2026-09-28",
+      "source": "Sentinel-2 L2A",
+      "cloud_cover": 2.1,
+      "resolution_m": 10.0,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "file_path": "data/projects\\demo-road-001\\after.tif",
+      "preview_url": "/api/projects/demo-road-001/images/after.png",
+      "mean_ndvi": 0.36,
+      "corridor_coverage_pct": 100.0
+    }
+  ]
+}
